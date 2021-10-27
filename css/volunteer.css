@@ -1,0 +1,182 @@
+@charset "utf-8";
+@import 'variables.css';
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Bildet fyller viewporten så langt det lar seg gjøre. For smale skjermer er
+ ikke bildet høyt nok til å fylle hele diven siden jeg ikke vil "strekke"
+ bildet, men beholde formatet */
+
+#bilde {
+	position: relative;
+	background-image: url('../images/hund_i_park.jpg');
+	background-size: 135%;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: calc(100vh - 80px);
+	min-height: 800px;
+}
+
+/* Denne diven forskjøvet fra midten med 48px også er alt innholdet forskjøvet
+48px tilbake igjen slik at det blit midtstilt. Jeg har gjort det slik for å få
+plass til det røde utropstegnet som dukker opp når man fyller inn skjemaet med
+ugyldig informasjon. Siden dette utropstegnet ikke vises konstant ville jeg
+midtstille resten av innholdet også kan utropstegnet dukke opp til høyre for
+resten. På den måten ser det ikke ut som at tekstfeltene ikke er midtstilt når
+errortegnet ikke vises.. Litt "hacky løsning, men det fungerer */
+
+#midtstill-innhold {
+	width: 448px;
+	margin: 0 calc(50% - 248px) 0 calc(50% - 200px);
+	padding-top: 100px;
+	text-align: center;
+}
+
+#overskrift {
+	color: #FFFFFF;
+	margin-right: 48px;
+}
+
+#kryss {
+	color: var(--dark_blue);
+	font-size: 32px;
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	margin: 0;
+	top: -72px;
+	right: 16px;
+}
+
+#kryss:hover {
+	color: #DDDDDD;
+}
+
+input {
+	height: 32px;
+	margin: 8px 0;
+}
+
+input[type="text"] {
+	width: calc(100% - 48px);
+	float: left;
+	border-color: red;
+}
+
+input[type="submit"] {
+	border: 0;
+	border-radius: 5px;
+	font-size: 24px;
+	max-width: calc(100%);
+	width: 200px;
+	font-weight: 700;
+	height: 48px;
+	margin-right: 48px;
+}
+
+input[type="text"]:disabled {
+	background-color: rgba(239,239,239,0.7);
+}
+
+input:focus {
+	border: 2px solid red;
+}
+
+.skjemafelt {
+	width: 100%;
+	float: left;
+}
+
+.errortegn {
+	margin: 7px 0;
+	float: right;
+	height: 32px;
+	cursor: pointer;
+	display: none;
+}
+
+#tekst {
+	width: 90%;
+	max-width: 1130px;
+	margin: 50px auto 0 auto;
+	padding-top: 100px;
+}
+
+/* Pilen er laget ved å rotere en div 45 grader
+med en border. */
+
+#arrow {
+	transform: rotate(45deg);
+	border: solid var(--bg);
+	border-width: 0 5px 5px 0;
+	border-radius: 5px;
+	display: block;
+	padding: 15px;
+	position: absolute;
+	bottom: 195px;
+	left: calc(50% - 17.5px);
+	right: calc(50% - 17.5px);
+}
+
+#link-tekst {
+	bottom: 230px;
+	right: calc(50% + 0px);
+	left: calc(50% - 26px);
+	margin: 0;
+	position: absolute;
+}
+
+/* De tre neste blokkene styler feilmeldingen som dukker opp dersom man ikke
+oppfyller kravene til form valideringen. */
+
+#error_overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	background-color: rgba(200, 200, 200, 0.5);
+	backdrop-filter: blur(5px);
+	z-index: 1;
+	display: none;
+}
+
+#errortekst {
+	width: 318px;
+	height: 200px;
+	position: absolute;
+	left: calc(50% - 175px);
+	right: calc(50% - 175px);
+	top: calc(50% - 100px);
+	background-color: #FFFFFF;
+	color: red;
+	padding: 0 16px;
+	text-align: center;
+	line-height: 200px;
+	border-radius: 5px;
+}
+
+#feilmelding {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+
+/* Når skjermen blir liten prøver ikke bildet å fylle viewporten lengre. Bildet
+bare fyller den plassen den tar */
+
+@media only screen and (max-width: 990px) {
+	#bilde {
+		height: 100%;
+		padding-bottom: 100px;
+		background-size: cover;
+	}
+	#link-tekst {
+		bottom: 345px;
+	}
+	#arrow {
+		bottom: 310px;
+	}
+}

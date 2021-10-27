@@ -1,0 +1,95 @@
+@import "variables.css";
+
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    color: var(--dark_blue);
+}
+
+
+#wrapper {
+    flex: 1 0 auto;
+    max-width: 1130px;
+    width: 90%;
+    margin-top: 80px;
+    align-self: center;
+}
+
+.image {
+    width: 463px;
+    height: auto;
+}
+
+/* Bilder */
+#image1 {
+    float: left;
+    margin-left: 50px;
+    width: 400px;
+
+}
+
+#image2 {
+    float: right;
+    margin-right: 50px;
+    width: 400px;
+}
+
+#image3 {
+    float: left;
+    margin-left: 50px;
+    width: 400px;
+
+}
+
+.paragraf > #image_2 {
+    flex: 1 0 0%;
+}
+
+.paragraf > #image1, #image3 {
+    flex: 1 0 0%;
+    align-self: end;
+}
+
+.image > img {
+    display: block;
+  }
+
+
+/* Avsnitt */
+.paragraf {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    line-height: 1.5;
+}
+.paragraf > .p {
+    flex: 2 0 0%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#paragraf_1 {
+    margin-top: 60px;
+}
+
+#paragraf_1, #paragraf_3 {
+    flex-direction: row;
+}
+
+
+/* Når skjermen er mindre enn 990px blir bildene mindre, og havner under teksten */
+@media screen and (max-width: 990px) {
+    #image1, #image2, #image3 {
+        width: 300px;
+        float: none;
+        margin: 0;
+    }
+    #paragraf_1, #paragraf_3, #paragraf_2 {
+        flex-direction: column;
+    }
+}
+

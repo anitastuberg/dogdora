@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="scripts/nyslider.js"></script>
+    <link rel="icon" class="dogPawIcon" type="icon/png" href="images/icons/dog-paw.svg" />
+    <!-- Favikonet er lagt til alle sidene for å støtte alle typer nettlesere -->
+    <title>DogDora</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar"></nav>
+    </header>
+
+    <!-- Slideshow -->
+    <div class="slideshow">
+        <div class="slider">
+            <div class="slides">
+
+                <input type="radio" name="radio-btn" id="radio1" onclick="slide(1)" checked>
+                <input type="radio" name="radio-btn" id="radio2" onclick="slide(2)">
+                <input type="radio" name="radio-btn" id="radio3" onclick="slide(3)">
+                <input type="radio" name="radio-btn" id="radio4" onclick="slide(4)">
+
+                <div class="slide first">
+                    <img src="images/Hund_1.jpg" alt="">
+                    <div class="infotekst">
+                        <h3>Covid 19</h3>
+                        <p>Vi er åpne som vanlig under Korona, men vi må ta forhondsregler. Alle nye hunder må i
+                            karantene.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/puppy_with_teddybear.png" alt="">
+                    <div class="infotekst">
+                        <h3>Hund og ferie</h3>
+                        <p>Mange glemmer at hunden ikke liker å være alene hjemme. I feriene kan det være lurt å tenke
+                            litt ekstra på hunden sin.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/hund_i_park.jpg" alt="">
+                    <div class="infotekst">
+                        <h3>Valp om våren</h3>
+                        <p>Om våren er det masse nye inntrykk, så det kan være lurt å sjekke ut kurs for valpen din.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/Koronahund.jpeg" alt="">
+                    <div class="infotekst">
+                        <h3>Maske til hunden</h3>
+                        <p>Nå har vår leverandør av veterinærmateriell kommet med masker til hunder. De kan kjøpes i
+                            skranken.</p>
+                    </div>
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div id='container_1'>
+
+        <!-- CTA-knappene -->
+        <div class="knapper">
+            <a href="dogs.html" class="button cta">
+                Adopter
+            </a>
+            <a href="pledge.html" class="button cta">
+                Bidra
+            </a>
+            <a href="about_relocation.html" class="button cta">
+                Omplasser
+            </a>
+        </div>
+
+        <!-- Hunder og Feed -->
+        <section class="hele">
+
+            <!-- Hunder -->
+            <div id="hund_1">
+                <img class="hund" src="images/Gard2.jpg" alt="Hund 1">
+                <div class="hund_tekst">
+                    <h3>Gard</h3>
+                    <p>Spretten hund som liker både lek og å ta det rolig. Her kommer det en del tekst for å vise at det trengs litt
+                        tekst her. Og man har jo alltid masse ting å si om hundene sine.</p>
+                </div>
+
+                <!-- Les mer knapp -->
+                <div class="knapp_hund">
+                    <a href="dogs.html" class="button">Se alle hunder</a>
+                </div>
+            </div>
+
+            <div id="hund_2">
+                <img class="hund" src="images/Ida1.jpg" alt="Hund 2">
+                <div class="hund_tekst">
+                    <h3>Ida</h3>
+                    <p>Ida ser litt ut som en hannhund, men er en søt og koselig dame. Hun liker ikke tyttebær, men
+                        spiser ellers det aller meste. Her kommer det en del tekst for å vise at det trengs litt
+                        tekst her. Og man har jo alltid masse ting å si om hundene sine.</p>
+                </div>
+
+                <!-- Les mer knapp -->
+                <div class="knapp_hund">
+                    <a href="dogs.html" class="button">Se alle hunder</a>
+                </div>
+            </div>
+
+            <!-- Feed -->
+            <div id="feed">
+                <h1>Feed</h1>
+
+                <div>
+                    <h3>Tur til Munkholmen</h3>
+                    <p>Mandag kl 16:00, møt opp på brygga 10 min før</p>
+                </div>
+                <div>
+                    <h3>Hundemat prøvesmaking</h3>
+                    <p>Prøvesmaking på hundemat og fordrag av Sissel Dog kl 16 på DogDora </p>
+                </div>
+                <div>
+                    <h3>Blåbærplukking</h3>
+                    <p>Ta med hunden ut i skogen og plukk bær! Møt opp på Ila tirsdag kl 17, så går vi sammen derfra</p>
+                </div>
+                <div>
+                    <h3>Salsakurs</h3>
+                    <p>Salsakurs for alle hundeelskere. Pris 100 kr, Møt opp kl 18 utenfor DogDora </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer"> </div>
+    </footer>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/navbar.js"></script>
+
+</body>
+
+</html>

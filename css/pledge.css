@@ -1,0 +1,224 @@
+@charset "utf-8";
+@import 'variables.css';
+
+#hoved {
+	max-width: 1130px;
+	align-self: center;
+	width: 90%;
+	margin: 100px auto;
+	overflow: hidden;
+	display: flex;
+}
+
+/* Inne i #hoved ligger det tre modaler. #bilde, #tekst og #skjema. #bilde og
+#tekst er samlet i #venstre side og blir plassert til venstre i #hoved.
+#skjema flyter til høyre side. Når skjermen blir litten blir alle modalene
+plassert under hverandre */
+
+#venstre-side {
+	float: left;
+	width: 60%;
+	height: 100%;
+}
+
+#bilde {
+	border-radius: 5px;
+}
+
+#tekst {
+	margin-top: 16px;
+	border-radius: 5px;
+	color: var(--dark_blue);
+}
+
+#skjema {
+	background-color: var(--dark_blue);
+	color: var(--bg);
+	padding: 32px 32px;
+	margin-left: 16px;
+	border-radius: 5px;
+	width: calc(40% - 80px);
+	float: right;
+}
+
+/* Midtstiller de øverste radio buttons. */
+
+#hyppighet {
+	display: flex;
+	justify-content: center;
+}
+
+/* Måtte gjøre dette fordi elementene har en margin for å gi plass til <span>
+elementet. <span> elementet er blitt brukt for å lage custom radio buttons. */
+
+#hyppighet label:first-child {
+	margin-right: 20px;
+}
+
+/* Alt frem til #gridcontainer er styling av knapper
+Inspirert av: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+
+.radio {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	z-index: 1;
+	text-align: center;
+}
+
+.radio_hyppighet {
+	padding-left: 20px;
+}
+
+.radio_sum {
+	width: 100%;
+	height: 100%;
+	min-height: 32px;
+	color: black;
+	line-height: 32px;
+}
+
+.radioknapp {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background-color: var(--bg);
+}
+
+.radio_bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: var(--bg);
+	border-radius: 5px;
+	z-index: -1;
+}
+
+.radio input {
+	position: absolute;
+	opacity: 0;
+	display: none;
+	cursor: pointer;
+}
+
+.radio_sum:hover input ~ .radio_bg {
+	background-color: var(--light_blue);
+}
+
+.radio_sum input:checked ~ .radio_bg {
+	background-color: var(--yellow);
+}
+
+.radio_hyppighet:hover input ~ .radioknapp {
+	background-color: var(--light_blue);
+}
+
+.radio_hyppighet input:checked ~ .radioknapp {
+	background-color: var(--yellow);
+}
+
+.radio_hyppighet .radioknapp:after {
+	top: 4px;
+	left: 4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--bg);
+	position: absolute;
+}
+
+.radioknapp:after {
+	content: "";
+	display: none;
+}
+
+.radio_hyppighet input:checked ~ .radioknapp:after {
+	display: block;
+}
+
+/* Ønsket at de 6 knappene skal plasseres i et rutenett som har enten 2 eller 3
+kolonner avhengig av skjermstørrelsen. Det ble ikke en helt optimal løsning,
+men det fungerer godt nok. Med 3 i kolonnen går knappene helt ut til kanten,
+men på mindre skjermer når det kun blir 2 kolonner så fyller ikke knappene hele
+bredden. */
+
+#grid-container {
+	margin: 16px auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(70px, 31.9%));
+	grid-gap: 8px;
+	justify-content: center;
+}
+
+input[type=text], input[type=email], input[type=number] {
+	width: 100%;
+	box-sizing: border-box;
+	min-width: 100px;
+	height: 24px;
+	margin-bottom: 8px;
+}
+
+input[type=submit] {
+	width: 100%;
+	height: 32px;
+	border-radius: 5px;
+	margin-bottom: 8px;
+	background-color: var(--light_blue);
+	border: 0px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: var(--yellow);
+}
+
+/* Bruker css-grid for å plassere to tekstfelt ved siden av hverandre. Når
+skjermen blir mindre blir tekstfeltene plassert under hverandre */
+
+.tekst-input {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-column-gap: 8px;
+	justify-content: center;
+}
+
+.tekst-input-objekt input:first-child {
+	margin-right: 16px;
+}
+
+img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+#personlige_detaljer {
+	margin: 16px 0;
+	text-align: center;
+	text-overflow: clip;
+}
+
+/* For skjermer mindre enn 990px plasseres de tre modalene under hverandre */
+
+@media only screen and (max-width: 990px) {
+	#skjema {
+		float: left;
+		margin-left: 0px;
+		width: calc(100% - 64px);
+		margin-bottom: 32px;
+		position: static;
+	}
+
+	#venstre-side {
+		width: 100%;
+		height: auto;
+	}
+
+	#hoved {
+		display: block;
+	}
+}

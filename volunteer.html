@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nb">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/volunteer.css">
+		<link rel="icon" class="dogPawIcon" type="icon/png" href="images/icons/dog-paw.svg"/> <!-- Favikonet er lagt til alle sidene for å støtte alle typer nettlesere -->
+		<title>Bli frivillig</title>
+		<link rel="stylesheet" href="css/stylesheet.css">
+	</head>
+	<body>
+		<header>
+			<nav id="navbar"></nav>
+		</header>
+		<!--
+		Feilmeldingen som blir synlig når man trykker på utropstegnet som
+		dukker opp dersom man fyller inn ugyldig informasjon i tekstfeltene.
+		Innholdet blir fylt inn av javascript, så det er derfor #feilmelding er
+		tom.
+		-->
+		<div id="error_overlay" onclick="lukkOverlay()">
+			<div id="errortekst">
+				<p id="kryss">&times;</p>
+				<p id="feilmelding">lol feilmelding</p>
+			</div>
+		</div>
+		<!-- Bilde blir lagt til ved hjelp av css -->
+		<div id="bilde">
+			<!--
+			"Midtstill" lol. Egentlig er denne diven forskjøvet med 48px også
+			er resten av elementene forskjøvet 48px motsatt vei igjen. Står
+			noen setninger om det i css/volunteer.css
+			-->
+			<div id="midtstill-innhold">
+				<h1 id="overskrift">Bli frivillig nå!</h1>
+				<!--
+				Her brukes en annen onsubmit-funksjon enn resten av skjemaene
+				fordi den må sjekke om tekstfeltene blir godkjent av den custom
+				valideringen jeg har skrevet ved hjelp av regex
+				-->
+				<form id="skjema" onsubmit="sendSkjema(); return false;">
+					<div id="alt">
+						<div class="skjemafelt">
+							<!--
+							Alle input feltene er type="text" fordi jeg kjører
+							en custom validering på feltene. Jeg gjør det sånn
+							for å unngå at det kommer feilmeldinger i hytt og
+							pine.
+							-->
+							<input type="text" id="fornavn" name="fornavn" placeholder="Fornavn" oninput="navnValidering(this.id)" required>
+							<!--
+							Dette bildet er kun synlig når man har fylt inn
+							informasjon i tekstfeltet som ikke blir godkjent av
+							valideringen. Dette gjelder for alle bildene med
+							class = "errortegn".
+							-->
+							<img id="fornavnerror" class ="errortegn" src="images/icons/exclamation_mark.png" alt="Feilkode-tegn" onclick="overlay(this.id)">
+						</div>
+						<div class="skjemafelt">
+							<input type="text" id="etternavn" name="etternavn" placeholder="Etternavn" oninput="navnValidering(this.id)" required>
+							<img id="etternavnerror" class ="errortegn" src="images/icons/exclamation_mark.png" alt="Feilkode-tegn" onclick="overlay(this.id)">
+						</div>
+						<div class="skjemafelt">
+							<input type="text" id="epost" name="epost" placeholder="E-post" oninput="epostValidering()" required>
+							<img id="eposterror" class ="errortegn" src="images/icons/exclamation_mark.png" alt="Feilkode-tegn" onclick="overlay(this.id)">
+						</div>
+						<div class="skjemafelt">
+							<input type="text" id="adresse" name="adresse" placeholder="Adresse" oninput="adresseValidering()" required>
+							<img id="adresseerror" class ="errortegn" src="images/icons/exclamation_mark.png" alt="Feilkode-tegn" onclick="overlay(this.id)">
+						</div>
+						<div class="skjemafelt">
+							<input type="text" id="postnr" name="postnr" placeholder="Postnr" oninput="postkodeValidering()" required>
+							<img id="postnrerror" class ="errortegn" src="images/icons/exclamation_mark.png" alt="Feilkode-tegn" onclick="overlay(this.id)">
+						</div>
+						<div class="skjemafelt">
+							<input type="text" id="poststed" name="poststed" placeholder="Poststed" disabled>
+							<img id="poststederror" class ="errortegn" src="images/icons/exclamation_mark.png" alt="Feilkode-tegn" onclick="overlay(this.id)">
+						</div>
+					</div>
+					<input type="submit" class='button' id="submit_button" name="submit_button" value="Send inn">
+				</form>
+				<!-- Klikkbar tekst og pil for å vise at det er mer informasjon lenger ned på siden -->
+				<a href="#tekst"><p id="link-tekst">Les mer</p><div id="arrow"></div></a>
+			</div>
+		</div>
+		<!-- Ikke noe spess her, bare noen diver med litt tekst -->
+		<div id="tekst">
+			<h2>Hvorfor vi trenger din hjelp</h2>
+			<p>
+			Å gi mat og trygghet til alle hundene i dyrehjemmet vårt ville ikke
+			vært mulig uten din hjelp. Våre frivillige sørger for at alle
+			hundene våre er trygge, friske og glade mens de gjør seg klare til
+			et nytt liv i et nytt hjem. Bli frivillig i dag og hjelp oss med å
+			finne et hjem til alle de fantastiske hundene som vi redder i
+			Trøndelag. For å kunne redde enda fler hunder i fremtiden er vi
+			avhengig av frivillige som hjelper til rundt dyrehjemmet og som
+			organiserer pengeinnsamlingsaksjoner. Å bli med som frivillig er en
+			strålende måte å gjøre en forskjell i ditt lokalmiljø. Hjelp oss
+			med å gi alle hundene våre et trygt og godt hjem ved å melde deg
+			som frivillig i dag. Fyll inn skjemaet over for å bli frivillig og
+			vi vil kontakte deg når det er behov. Vi klarer ikke å redde livet
+			til disse hundene uten din hjelp.
+			</p>
+			<h2>Hva du kan gjøre som frivillig</h2>
+			<p>
+			Hvert år arrangerer vi to pengeinnsamlingsaksjoner, ett i Trondheim
+			og ett i Steinkjer. Vi trenger hjelp til å både organisere
+			arrangementene og å utføre forskjellige oppgaver knyttet til
+			arrangementene. Pengeinnsamlingsaksjonen i Trondheim blir sendt på
+			nasjonalt TV så vi trenger hjelp med alt fra sikkerhet til
+			underholdning på scenen. Disse innsamlingsaksjonene er våres
+			største inntektskilde og er veldig viktig for fremtiden til
+			Dogdora. Vi trenger også hjelp til å utføre de dagligdagse
+			gjøremålene på dyrehjemmet. Dette inkluderer alt fra papirarbeid
+			til å gi omsorg til hundene. Alle disse oppgavene er nødvendige for
+			at dyrehjemmet skal gå rundt og vi trenger din hjelp til å utføre
+			de.
+			</p>
+		</div>
+		<footer>
+			<div id="footer"></div>
+		</footer>
+		<script src="scripts/formvalidator.js"></script>
+		<script src="scripts/footer.js"></script>
+        <script src="scripts/navbar.js"></script>
+	</body>
+</html>

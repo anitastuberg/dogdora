@@ -1,0 +1,64 @@
+@import "variables.css";
+@import "stylesheet.css";
+
+/* Bakgrunn */
+body{
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: 0;
+}
+
+/* TOPPBOKS */
+#toppBoks{
+    max-width: 1130px;
+    align-self: center;
+    width: 90%;
+    /* Content av boksen */
+    display: flex;
+    flex-direction: column;
+}
+
+/* TEKST */
+
+    /* HEADER */
+    #headerBoks{
+        margin-top: 80px;
+    }
+
+    /* SUB-HEADER */
+    .subHeader{
+        margin-bottom: 16px;
+    }
+
+/* TEKSTBOKS */
+.tekstBoks{
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.button:hover{
+    text-decoration: underline;
+}
+
+
+/* Spørsmålsbokser */
+.spørsmålBoks{
+    margin-bottom: 16px;
+}
+
+#QA{
+    background-color: var(--light_blue);
+}
+
+#QA_ramme{
+	width: 90%;
+	max-width: 1130px;
+	margin: 0 auto;
+}

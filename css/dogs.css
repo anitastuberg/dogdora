@@ -1,0 +1,200 @@
+@import "variables.css";
+
+/* Midstiller innholdet som på de andre sidene */
+#midtstill-innhold {
+	width: 90%;
+	max-width: 1130px;
+	margin: 80px auto;
+}
+
+#filter {
+    width: 200px;
+    position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	float: left;
+}
+
+/* Filter søkefelt  */
+#sokeFelt {
+    border: 1px solid var(--dark_blue);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 20px;
+    padding: 2px;
+    padding-left: 5px;
+    outline: 0;
+}
+
+#innhold {
+	top: 0px;
+	float: right;
+	width: calc(100% - 200px);
+}
+
+img {
+    width: 229px;
+    height: 193px;
+    object-fit: cover;
+    object-position: 100%;
+}
+
+/* Hundene blir plassert i en grid */
+#hunder {
+    display: grid;
+	margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, 229px);
+	justify-content: center;
+    grid-row-gap: 80px;
+    grid-column-gap: 40px;
+}
+ 
+.navn_hund {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.intro_hund {
+	width: 229px;
+}
+
+.introtekst_hund {
+   display: -webkit-box;
+   max-width: 229px;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+
+.les_mer_knapp {
+    display: block;
+    color: var(--bg);
+    background-color: var(--dark_blue);
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.les_mer_knapp:hover{
+    background-color: #247380;
+    color: var(--bg);
+    transition: ease-in-out 0.3s;
+  }
+.les_mer_knapp:active{
+    background-color: #0E2E33;
+  }
+
+
+/* Styling innhold form i modal */
+#navn, #email, #info {
+    width: 90%;
+    padding: 10px 20px;
+    margin: 8px 0;
+}
+
+#modal {
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    z-index: 1;
+	margin: 100px 0;
+}
+
+.alt_innhold {
+    background-color: var(--bg);
+	border-radius: 5px;
+    padding: 8px 32px 32px 32px;
+}
+
+#lukk-modal {
+	width: 100%;
+	top: 0;
+	position: absolute;
+}
+
+#bakgrunn_modal {
+    position: fixed;
+    backdrop-filter: blur(5px);
+    background-color: rgba(200, 200, 200, 0.5);
+    width: 100vw;
+    height: 100vh;
+	top: 0;
+    z-index: 1;
+    display: none;
+	overflow: scroll;
+}
+
+#kryss {
+	color: var(--dark_blue);
+	font-size: 32px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 8px 0;
+	float: right;
+}
+
+#kryss:hover {
+	color: var(--light_blue);
+}
+
+.slideshow {
+    display: grid;
+    grid-template-areas:
+    "en to tre";
+    column-gap: 5px;
+	width: 100%;
+}
+
+#en {
+    grid-area: en;
+    justify-self: stretch;
+}
+#to {
+    grid-area: to;
+}
+
+#tre {
+    grid-area: tre;
+}
+#en img{
+    object-fit: cover;
+    width: 100%;
+}
+#to img{
+    object-fit: cover;
+    width: 100%;
+}
+
+#tre img{
+    object-fit: cover;
+    width: 100%;
+}
+
+#mot_hund {
+    background-color: var(--light_blue);
+    padding: 50px 20px 10px;
+    justify-content: space-around;
+    margin: 5%;
+    padding: 3%;
+}
+#send_inn {
+    position: relative;
+    text-align: center;
+}
+
+#textfelt {
+    margin: 30px 0px;
+}
+
+#infoen {
+    margin-top: 30px;
+    width: 90%;
+}

@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import 'variables.css';
+@import 'navbar.css';
+@import 'footer.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+body {  
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    color: var(--dark_blue);
+    font-family: var(--b_font);
+    font-size: 1.125em;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+
+/* TEXT */
+h1{
+  font-family: var(--h_font);
+  font-size: 3.125em;
+  margin: 0;
+  font-weight: normal;
+}
+
+h2{
+  font-family: var(--h_font);
+  font-weight: 600;
+  font-size: 2.125em;
+  margin: 0;
+}
+
+h3{
+  font-family: var(--b_font);
+  font-weight: 600;
+  font-size: 1.375em;
+  margin: 0;
+}
+
+.dogPawIcon {
+  color: var(--dark_blue);
+}
+
+input{
+  border: none;
+  font-family: var(--b_font);
+  font-size: 80%;
+  padding-left: 2%;
+}
+
+textarea{
+  padding-right: 2%;
+  padding-top: 16px;
+  border: none;
+  font-family: var(--b_font);
+  font-size: 80%;
+  padding-left: 2%;
+}
+
+.button{
+  padding: 12px 16px;
+  color: var(--bg);
+  font-family: var(--b_font);
+  font-size: 1em;
+
+  max-height: 48px;
+  background-color: var(--dark_blue);
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--bg);
+  font-family: var(--b_font);
+
+  text-decoration: none;
+}
+
+.button:hover{
+  background-color: #247380;
+  color: var(--bg);
+  transition: ease-in-out 0.3s;
+}
+
+.button:active{
+  background-color: #0E2E33;
+}
+
+/*when the screen is under 865px*/
+@media screen and (max-width: 990px) {
+  body{
+    font-size: 1em;
+  }
+}
+
+/*when the screen is under 695px*/
+@media screen and (max-width: 695px) {
+  body{
+    font-size: 0.875em;
+  }
+}

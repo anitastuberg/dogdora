@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/pledge.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="icon" class="dogPawIcon" type="icon/png" href="images/icons/dog-paw.svg"/> <!-- Favikonet er lagt til alle sidene for å støtte alle typer nettlesere -->
+	<title>Støtt oss</title>
+
+</head>
+
+<body>
+	<header>
+        <nav id="navbar"></nav>
+    </header>
+
+	<div id="hoved">
+		<div id="venstre-side">
+			<div id="bilde">
+				<img src="images/puppy_with_teddybear.png" alt="Hundebilde">
+			</div>
+			<!-- Deler av denne teksten er hentet direkte fra eksisterende dyrehjem sine nettsider -->
+			<div id="tekst">
+				<h2>Du kan gjøre en forskjell!</h2>
+				<p>
+				Hver donasjon bidrar til å gi en hund i nød et trygt og godt
+				hjem. Du kan hjelpe til å redde disse fantastiske dyrene ved å
+				donere til vår organisasjon. Doner i dag og bidra til å gjøre
+				ditt lokalmiljø til et bedre sted!
+				Det er imidlertid forbundet store kostnader med driften av
+				DogDora, og selv om vårt arbeid betyr enormt mye for det
+				enkelte dyr, mottar vi ingen offentlige støtte. Vi er derfor
+				helt avhengige av økonomiske bidrag i form av gaver for å kunne
+				hjelpe dyrene og sørge for å gi dem hva enn de måtte trenge for
+				å trives og ha det godt.
+				</p>
+			</div>
+		</div>
+		<div id="skjema">
+			<!--
+			Denne onsubmit-biten blir brukt på flere sider, men den var så
+			kort at jeg syntes det var like greit å bare legge den inn for hånd hver
+			gang ¯\_(o.o)_/¯
+			-->
+			<form id="donasjon_detaljer" onsubmit="window.alert('Skjemaet ble sendt inn!'); this.reset(); return false;">
+				<div id="hyppighet">
+					<!-- "En gang" eller "Månedlig" radioknapp på toppen av skjemaet -->
+					<label class="radio radio_hyppighet" for="enkelt">En gang
+						<input type="radio" id="enkelt" name="donasjon" value="en_gang">
+						<span class="radioknapp"></span>
+					</label>
+					<label class="radio radio_hyppighet" for="manedlig">Månedlig
+						<input type="radio" id="manedlig" name="donasjon" value="manedlig" checked>
+						<span class="radioknapp"></span>
+					</label>
+				</div>
+				<!-- De 6 knappene for å velge sum man vil donere plassert i en grid -->
+				<div id="grid-container">
+					<div class="grid-objekt">
+						<label class="radio radio_sum" for="2000">2000 kr
+							<input type="radio" id="2000" name="sum" value="2000">
+							<span class="radio_bg"></span>
+						</label>
+					</div>
+					<div class="grid-objekt">
+						<label class="radio radio_sum" for="500">500 kr
+							<input type="radio" id="500" name="sum" value="500">
+							<span class="radio_bg"></span>
+						</label>
+					</div>
+					<div class="grid-objekt">
+						<label class="radio radio_sum" for="300">300 kr
+							<input type="radio" id="300" name="sum" value="300">
+							<span class="radio_bg"></span>
+						</label>
+					</div>
+					<div class="grid-objekt">
+						<label class="radio radio_sum" for="200">200 kr
+							<input type="radio" id="200" name="sum" value="200">
+							<span class="radio_bg"></span>
+						</label>
+					</div>
+					<div class="grid-objekt">
+						<label class="radio radio_sum" for="100">100 kr
+							<input type="radio" id="100" name="sum" value="100">
+							<span class="radio_bg"></span>
+						</label>
+					</div>
+					<div class="grid-objekt">
+						<label class="radio radio_sum" for="50">50 kr
+							<input type="radio" id="50" name="sum" value="50" checked>
+							<span class="radio_bg"></span>
+						</label>
+					</div>
+				</div>
+				<!-- Nummerfelt der man kan skrive inn en valgfri sum hvis man ønsker der -->
+				<input type="number" placeholder="Annet beløp" id="annet_belop" name="sum" min="1">
+
+				<h3 id="personlige_detaljer">Personlige detaljer</h3>
+				<!-- Tekstfelt for fornavn og etternavn plassert i en grid -->
+				<div class="tekst-input">
+					<div class="tekst-input-objekt">
+						<input type="text" placeholder="Fornavn" id="fornavn" name="fornavn" required>
+					</div>
+					<div class="tekst-input-objekt">
+						<input type="text" placeholder="Etternavn" id="etternavn" name="etternavn" required>
+					</div>
+				</div>
+				<!--
+				Epostfelt og submit-knapper. Submit-knappene gjør den eksakt
+				samme operasjonen siden vi ikke kan implementere en
+				betalingsløsning
+				-->
+				<input type="email" placeholder="Epostadresse" id="epost" name="epost" required>
+				<input type="submit" value="Betal med bankkort">
+				<input type="submit" value="Betal med Vipps">
+			</form>
+		</div>
+	</div>
+
+	<footer>
+		<div id="footer"> </div>
+	</footer>
+	<script src="scripts/footer.js"></script>
+	<script src="scripts/navbar.js"></script>
+</body>
+
+</html>

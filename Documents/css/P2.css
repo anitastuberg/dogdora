@@ -1,0 +1,171 @@
+@import "variables.css";
+
+html, body {
+    height: 100%;
+    color: var(--darkGreen);
+    background: var(--background);
+	margin: 0px;
+}
+
+.body {
+    width: 100ch;
+    margin:auto;
+    position: relative;
+    padding-bottom: 100px;
+    }
+
+header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    background-color: var(--darkGreen);
+}
+
+footer {
+  position: relative;
+  align-self: center;
+  width: 100%;
+  height: 366px;
+  left: 0px;
+  right: 0px;
+  top: 20px;
+  bottom: 0px;
+  background: var(--darkGreen);;
+  padding-top: 10px;
+  flex-shrink: 0;
+  }
+
+.forside {
+      flex: 1 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #E8E8E8;
+}
+
+.java li{
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 75px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 51px;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 33px;
+}
+
+p, li, table{
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.caption {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+a, b {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 33px;
+}
+
+.box{
+  font-size: 18px;
+  margin-top: 3em;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+.sublistparent {
+  list-style-type: disc;
+}
+
+.sublist li{
+  list-style-type: circle;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#h1_example {
+	font-family: 'Poppins', sans-serif;
+	font-size: 50px;
+}
+
+#h2_example {
+	font-family: 'Poppins', sans-serif;
+	font-size: 34px;
+	font-weight: 600;
+}
+
+#h3_example {
+	font-family: 'Poppins', sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+#body_example {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+}
+
+#caption_example {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+}
+
+#footer_example {
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+}

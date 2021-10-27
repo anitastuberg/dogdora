@@ -1,0 +1,176 @@
+@import "variables.css";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--dark_blue);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--b_font);
+
+}
+
+/* Wrapper for alt innholdet på siden */
+#wrapper {
+    display: flex;
+	margin-top: 80px;
+    flex-direction: row;
+    padding-bottom: 30px;
+	align-self: center;
+	width: 90%;
+	max-width: 1130px;
+}
+
+/* Overskrifter */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* åpningstider */
+.dager, .time{
+    margin-top: 0px;
+}
+
+#kontakt {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding-top: 10px;
+}
+
+#kontakt_oss a{
+    background-color: var(--bg);
+    color: var(--dark_blue);
+}
+
+/* Tekst under kartet */
+.caption {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Små ikoner for kontaktinfo */
+.kontaktInfo > #pin, #phone, #email {
+    flex: 1 0 0%;
+}
+
+.icon > img {
+    display: block;
+  }
+
+  
+.kontaktInfo > .p {
+    flex: 2 0 0%;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-self: end;
+}
+
+#pin, #phone {
+    float: left;
+    margin-right: 10px;
+    margin-top: 3px ;
+}
+
+
+#email {
+    float: left;
+    margin-right: 10px;
+    margin-top: 4px ;
+}
+
+
+/* Sosiale media ikoner */
+#facebook, #instagram, #twitter {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#sosiale_media {
+    flex: 2 0 0%;
+    text-align: center;
+}
+
+#kart {
+    border-radius: 5%;
+    margin-top: 50px;
+    align-self: end;
+}
+
+#åpningstider {
+    margin-bottom: 175px;
+    width: 200px;
+    text-align: left;
+    align-self: center;
+    padding: 10px;
+    margin-top: 90px;
+}
+
+/* Innholdet til høyre */
+#høyre {
+    display: flex;
+    flex-direction: column;
+    margin-left: 350px;
+    text-align: center;
+    float: right;
+}
+
+/* Teksten under kartet */
+.caption {
+    text-align: center;
+}
+
+.kontaktInfo a {
+    color: var(--dark_blue) !important;
+    text-decoration: none;
+}
+
+/* Når skjermen er mindre enn 1300px blir marginen mindre */
+@media screen and (max-width: 1300px) {
+    #høyre {
+        margin-left: 10%;
+    }
+}
+
+/* Når skjermen er mindre enn 1100px blir innnholdet plassert vertikalt i stedet for horisontalt */
+@media screen and (max-width: 1100px) {
+
+    #wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+   
+    #kontakt {
+        align-items: center;
+        float: none;
+    }
+
+    #åpningstider {
+        width: 200px;
+        margin: 2px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 0px;
+        text-align: left;
+    }
+
+    #mandag > .time, #lørdag > .time, #søndag > .time {
+        display: table;
+        margin: 0;
+    }
+    #mandag > .dager, #lørdag > .dager, #søndag > .dager {
+        margin: 0;
+    }
+    #høyre {
+        margin-left: 0;
+    }
+    h2 {
+        margin-top: 30px;
+    }
+    
+}

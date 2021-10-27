@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" class="dogPawIcon" type="icon/png" href="images/icons/dog-paw.svg" />
+    <!-- Favikonet er lagt til slik i alle HTMl sider for å støtte alle nettlesere -->
+
+
+    <title>Kontakt oss</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar"></nav>
+    </header>
+
+    <div id="wrapper">
+
+        <!-- Kontaktinfo -->
+        <div class="kontakt">
+            <h1> Kontakt oss </h1>
+
+
+            <!-- Addresse -->
+            <div class="kontaktInfo">
+                <div class="icon">
+                    <img src="images/icons/pin.png" alt="pin icon" id="pin" class="image" style="width:15px">
+                </div>
+                <p> <a href="https://www.google.com/maps/place/Dora+I,+7042+Trondheim,+Norge/@63.4395764,10.4190324,17z/data=!3m1!4b1!4m5!3m4!1s0x466d310a59b2641f:0xc821b6f8ff4ce98e!8m2!3d63.4395764!4d10.4212211?hl=no-NO"> Doravegen 34, 7042 Trondheim </a></p>
+
+            </div>
+
+            <!-- Telefonnummer -->
+            <div class="kontaktInfo">
+                <div class="icon">
+                    <img src="images/icons/phone_call.png" alt="phone icon" id="phone" class="image" style="width:15px">
+                </div>
+                <p> <a href="tel:+4787655439">+47 876 55 439 </a></p>
+            </div>
+
+            <!-- E-post -->
+            <div class="kontaktInfo">
+                <div class="icon">
+                    <img src="images/icons/email.png" alt="email icon" id="email" class="image" style="width:15px">
+                </div>
+                <p><a href="mailto:dogdora@dogdora.no"> dogdora@dogdora.no </a></p>
+            </div>
+
+
+            <!-- Kode for Google maps API -->
+            <div id="kart">
+
+                <div id="googleMaps" style="width:420px;height:280px;"></div>
+
+                <script>
+                    function myMap() {
+                        const center = { lat: 63.439908, lng: 10.422880 };
+                        const map = new google.maps.Map(document.getElementById("googleMaps"), {
+                            zoom: 13,
+                            center: center,
+                        });
+                        const marker = new google.maps.Marker({
+                            position: center,
+                            map: map,
+                        });
+                    }
+
+                </script>
+
+                <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnGrukiAXW2BM_-ojhukY2s4MHwR9zdBg&callback=myMap">
+                    </script>
+                <p class="caption">
+                    Trykk på Google logoen for å gå til Google Maps
+                </p>
+            </div>
+        </div>
+
+        <!-- Container for alt innholdet til høyre -->
+        <div id="høyre">
+
+            <!-- Åpningstider -->
+            <div id="åpningstider">
+                <h2>Åpningstider:</h2>
+
+                <div id="mandag">
+                    <p class="dager" style="display: inline-block;"> Mandag-fredag:</p>
+                    <p class="time" style="float: right;">09-17</p><br>
+                </div>
+                <div id="lørdag">
+                    <p class="dager" style="display: inline-block;"> Lørdag: </p>
+                    <p class="time" style="float: right;">10-16</p>
+                </div>
+                <div id="søndag">
+                    <p class="dager" style="display: inline-block;"> Søndag: </p>
+                    <p class="time" style="float: right;">12-18</p>
+                </div>
+
+            </div>
+
+            <!-- Div element for sosiale media ikoner med linker -->
+            <div class="social">
+                <h2 class="caption">
+                    Følg oss på sosiale medier!
+                </h2>
+                <div id="sosiale_media">
+                    <a href="https://facebook.com"><img src="images/icons/facebook.png" alt="facebook icon" id="facebook"
+                            class="image" style="width:35px"></a>
+                    <a href="https://instagram.com"><img src="images/icons/instagram.png" alt="instagram icon" id="instagram"
+                            class="image" style="width:35px"></a>
+                    <a href="https://twitter.com"><img src="images/icons/twitter.png" alt="twitter icon" id="twitter"
+                            class="image" style="width:35px"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer"> </div>
+    </footer>
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/footer.js"></script>
+</body>
+
+</html>

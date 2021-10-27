@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+	--dark_blue: #1A535C;
+	--light_blue: #C4F6F3;
+	--bg: #F7FFF7;
+	--red: #FF6B6B;
+	--yellow: #FFE66D;
+	--h_font: 'Poppins', sans-serif;
+	--b_font: 'Lato', sans-serif;
+}

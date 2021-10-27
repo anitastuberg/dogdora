@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <title>Om adopsjon</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href='css/stylesheet.css'>
+    <link rel="stylesheet" href="css/about_relocation.css">
+    <link rel="icon" class="dogPawIcon" type="icon/png" href="images/icons/dog-paw.svg"/> <!-- Favikonet er lagt til alle sidene for å støtte alle typer nettlesere -->
+
+</head>
+
+<body>
+    <header>
+        <nav id="navbar"></nav>
+    </header>
+
+    <!-- Alt over skjema -->
+    <div id='toppBoks'>
+
+        <!-- HEADER -->
+        <div id='headerBoks'>
+            <h1>Omplassering</h1>
+        </div>
+
+        <!-- Hva må du tenke på - flexbox -->
+        <div class='tekstBoks'>
+
+            <!-- SUB-HEADER -->
+            <div class='subHeader'>
+                <h2>Hva må du tenke på?</h2>
+            </div>
+
+            <!-- BODY-TEKST -->
+            <div>
+
+                <!-- Listen over stegene du må gjennom -->
+                <!-- Steg 1 -->
+                <div class='steg'>
+                    <div class='dropdown'>
+                        <h3>Før du kommer</h3>
+                    </div>
+                    <div class='dropInnhold'>
+                        <div>må du først ta en tur til veterinær og få helt ny, skriftlig helseattest
+                            og evt ordne vaksine om han ikke har det.(Haster det, kan vi hjelpe deg med dette.)</div>
+                        <div>Sjekk hva som står i evt. kjøpekontrakt og kontakt evt opdretter.</div>
+                        <div>Skaff nødvendige underskrifter, i tilfelle papirene på en annen enn deg.</div>
+                    </div>
+                </div>
+
+                <!-- Steg 2 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Når du kommer</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+
+                <!-- Steg 3 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Hva skal du ta med?</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+
+                <!-- Steg 4 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Vi tar inn hunden på DogDora og har den her i påvente av et
+                        nytt hjem</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+
+                <!-- Steg 5 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Hvor land tid tar det?</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+
+                <!-- Steg 6 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Hvor finner vi nye eiere?</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+
+                <!-- Steg 7 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Hvem får hunden din?</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+
+                <!-- Steg 8 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Den nye eieren må skrive under kontrakt:</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+
+                <!-- Steg 9 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Hunden kan da teoretisk sett få nytt hjem igjen, dersom
+                        gemyttet tilseier det.</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+
+                <!-- Steg 10 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Kontakt med ny eier?</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+
+                <!-- Steg 11 -->
+                <div class='steg'>
+                    <h3 class='dropdown'>Hva om ingen vil ha ham?</h3>
+                    <div class='dropInnhold'>
+                        <div>lorem ipsum...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skjema - Flexbox -->
+    <div class='tekstBoks' id='skjema'>
+        <div id='skjemaRamme'>
+            <div class='subHeader'>
+                <h2>Ønsker du å omplassere hunden din?</h2>
+            </div>
+            <div class=body>Ta kontakt her!</div>
+
+            <!-- Kontaktskjema -->
+            <form method='post' id='formBoks' onsubmit="window.alert('Skjemaet ble sendt inn!'); this.reset(); return false;">
+                <div id='topp_felt'>
+                    <input type='text' id='fulltNavn' name='fulltNavn' placeholder='Fullt navn' required>
+                    <input type='email' id='email' name='email' placeholder='E-post' required>
+                </div>
+                <textarea id='kommentar' name='info' placeholder='Skriv kort om hunden din, og hvorfor du ønsker å omplassere den. Vi tar kontakt med deg så fort vi kan, for å hjelpe deg gjennom prosessen.' required=''></textarea>
+                    <input type='submit' class='button' name='submit_button' value='Send inn'>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div id="footer"> </div>
+        </footer>
+        <script src="scripts/footer.js"></script>
+        <script src="scripts/navbar.js"></script>
+        <script src='scripts/collapsible.js'> </script>
+
+    </body>

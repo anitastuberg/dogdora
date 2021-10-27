@@ -1,0 +1,226 @@
+@import "stylesheet.css";
+@import "variables.css";
+
+/*inspirasjon til Slideshowet er hentet fra Coding Snows youtubevideo: https://www.youtube.com/watch?v=0wvrlOyGlq0&ab_channel=CodingSnow*/
+
+/*Stilen på slideshowet blir satt herfra og mye av funksjonaliteten*/
+#container_1{
+    max-width: 1238px;
+    width: 90%;
+    align-self: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.slideshow {
+    position: relative;
+    margin-top: 0px;
+}
+
+.infotekst {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(196,246,243, 0.50);
+    position: relative;
+    left: 5%;
+    bottom: 450px;
+    width: 25%;
+}
+
+/* Breakpoint for teksten på slideren, slik at den ikke blir for vanskelig å lese.*/
+@media only screen and (max-width: 700px) {
+    .infotekst {
+        width: 80%;
+    }
+}
+
+.slider{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Her settes manuellknappene man kan trykke på (de små dottene nederst) */
+.manual-btn { 
+    border: 2px solid var(--light_blue);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto div {
+    border: 2px solid var(--light_blue);
+    border-radius: 10px;
+    margin-top: 460px;
+    padding: 5px;
+    transition: 1s;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: var(--red);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: var(--red);
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: var(--red);
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: var(--red);
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: var(--red);
+}
+
+/* Stilen på de forskjellige knappene.*/
+.knapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Setter griddet slik at det blir enklere å lese det.*/
+@media only screen and (max-width: 700px) { 
+    .knapper {
+        flex-direction: column;
+        row-gap: 0;
+        margin: auto;
+    }
+}
+
+#hund_1, #hund_2 {
+    position: relative;
+}
+
+ .cta {
+    margin: 40px; 
+    width: 200px;
+    text-align: center;
+}
+
+.knapp_hund {
+    position: absolute;
+    right: 0px;
+    bottom: 15px;
+}
+
+.hund_tekst {
+    position: relative;
+    width: calc(100% - 150px);
+}
+
+@media only screen and (max-width: 700px) {
+    .cta{
+        margin: 10px;
+    }
+}
+
+/* Her er for feed og hunder*/
+.hele {
+    display: grid;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin: 0 0 40px 0;
+    grid-template-columns: 60% calc(40% - 30px);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "hund_1 feed"
+    "hund_2 feed";
+  }
+
+.hund {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 0 20%;
+}
+
+#hund_1 {
+    grid-area: hund_1;
+}
+
+#hund_2 {
+    grid-area: hund_2;
+}
+
+#feed {
+    grid-area: feed;
+    background-color: var(--light_blue);
+    padding: 30px;
+    word-wrap: break-word;  
+}
+
+@media only screen and (max-width: 700px) {
+    .hele {
+        row-gap: 30px;
+        column-gap: 30px;
+        margin: 0 7% 40px 7%;
+        grid-template-columns: 60% calc(40% - 30px);
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "hund_1 hund_1"
+        "hund_2 hund_2"
+        "feed feed";
+      }
+}

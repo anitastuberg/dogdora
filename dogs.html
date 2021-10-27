@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/dogs.css">
+    <link rel="icon" class="dogPawIcon" type="icon/png" href="images/icons/dog-paw.svg"/> <!-- Favikonet er lagt til alle sidene for å støtte alle typer nettlesere -->
+
+	<title>Hunder</title>
+
+</head>
+
+<body>
+	<header>
+		<nav id="navbar"></nav>
+	</header>
+	<!-- Denne diven er skjult som default i css-->
+	<div id="bakgrunn_modal">
+		<!--
+		En tom div bak resten av modalen som man kan klikke på for å lukke
+		modalen. Den er plassert slik at hvis man trykker utenfor modalen vil
+		modalen lukke seg.
+		-->
+		<div id="lukk-modal" onclick="off()"></div>
+		<!--
+		Modal for en hund. W3 sin validator gir noen feil fordi det mangler
+		innhold i noen headere osv. Dette inhholdet blir fylt av javascript når
+		man åpner modalen.
+		-->
+		<div id="modal">
+			<div class="alt_innhold">
+				<!--Bilder-->
+				<p id="kryss" onclick="off()">&times;</p>
+				<div class="slideshow">
+					<div id="en"><img id="bilde" src="images/hund1_about.jpg" alt="Bilde av hund"></div>
+					<div id="to"><img id="bilde2" src="images/hund1_about.jpg" alt="Bilde av hund"></div>
+					<div id="tre"><img id="bilde3" src="images/hund1_about.jpg" alt="Bilde av hund"></div>
+				</div>
+				<!--Innhold som navn, beskrivelse, egenskaper og tekst-->
+				<div class="om_hunden">
+					<div>
+						<h1 id="hundeNavn"></h1>
+					</div>
+					<div>
+						<h3 id="beskrivelse"></h3>
+					</div>
+					<div>
+						<h3 id="egenskaper"></h3>
+					</div>
+					<div>
+						<p id="tekst"></p>
+					</div>
+					<!--Kontaktskjema
+					Onsubmit-biten var så kort så syntes det var letter å
+					skrive den inn på hvert skjema enn å lage en egen funksjon
+					-->
+					<form id="mot_hund" method="POST" onsubmit="window.alert('Skjemaet ble sendt inn!'); this.reset(); return false;">
+						<h2 id="tittel_skjema">Vil du møte hunden?</h2>
+						<label for="navn"></label>
+						<input type="text" id="navn" name="navn" placeholder="Navn" required>
+						<label for="email"></label>
+						<input type="email" id="email" name="email" placeholder="E-post" required> <br>
+						<div id="infoen">
+							<label for="info">Skriv når det passer å komme innenfor våre åpningstider.
+								Og fortell oss litt om hvilket liv hunden kan få hos deg/dere?</label> <br> </div>
+						<div id="textfelt">
+							<textarea id="info" name="info" rows="4" cols="50" required></textarea>
+						</div>
+						<div id="send_inn">
+							<input class="button" type="submit" value="Send inn">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--Søk og filtering-->
+	<div id="midtstill-innhold">
+		<div id="filter">
+			<h3>Filter</h3>
+			<form id="form">
+				<input id="sokeFelt" type="text" placeholder="Søk">
+				<br>
+				<br>
+				<!--Filtrering etter pelslengde-->
+				<h3>Pels</h3>
+				<input id="pels.kort" type="checkbox"> Kort pels
+				<br>
+				<input id="pels.middels" type="checkbox"> Mellomlang
+				<br>
+				<input id="pels.lang" type="checkbox"> Lang
+				<br>
+				<br>
+
+				<!--Filtrering etter egenskaper-->
+				<h3>Egenskaper</h3>
+				<input id="turglad" type="checkbox"> Turglad
+				<br>
+				<input id="lydig" type="checkbox"> Lydig
+				<br>
+				<input id="familievennlig" type="checkbox"> Familievennlig
+				<br>
+			</form>
+		</div>
+		<div id="innhold">
+			<!--Infotekst på toppen av siden-->
+			<div id="overskrift">
+				<h1>Hunder til adopsjon</h1>
+				<p>Dette er våre hunder som er ute til adposjon for øyeblikket.
+					Nye hunder vil bli lagt ut så fort de er klare til
+					adopsjon.</p>
+			</div>
+			<!--Her blir alle hundene vist-->
+			<div id="hunder"></div>
+		</div>
+	</div>
+	<footer>
+		<div id="footer"> </div>
+	</footer>
+	<script src="scripts/dogs.js"></script>
+	<script src="scripts/footer.js"></script>
+	<script src="scripts/navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+@import "variables.css";
+
+
+body {
+    margin: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+
+/* Navigasjonsbar */
+#navbar {
+	  width: 100%;
+    font-family: var(--b_font);
+    font-size: 1.125em;
+    height: 80px;
+    background-color: var(--dark_blue);
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+
+
+/* Navigasjonsmeny med linker til alle sidene */
+  #navmenu {
+    background-color: var(--dark_blue);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+
+#navmenu ul{
+    list-style-type: none;
+    background-color: var( --dark_blue);
+    font-family: var(--b_font);
+    text-align: center;
+  }
+  
+  #navmenu li {
+    width: 100%;
+    list-style-type: none; 
+    display: inline;   
+  }
+
+  #navmenu li, a {
+    display: inline;
+    white-space: nowrap
+  }
+
+  #navmenu a {
+    display: block;
+	  text-decoration: none;
+    height: 45%;
+    text-align: center;
+    padding: 14px 16px;
+    color: var(--bg);
+    padding-top: 30px;
+  }
+
+  /* Når man hovrer over et element i menyen */
+  #navmenu a:hover {
+    background-color: var(--light_blue);
+    color: var(--dark_blue) !important;
+  }
+
+  /* Når man klikker på et element i menyen */
+  #navmenu :active {
+    text-decoration: underline;
+  }
+
+
+  /* Første element i navigasjonsbaren, som har id "logo" */
+  #logo a {
+    font-size: 36px !important; 
+    padding: 15px 40px 0px 15px;
+    height: 82%;
+  }
+
+  /* Den siden man er på highlightes */
+  .current > a {
+    font-weight: bold;
+    font-size: 95%;
+    text-decoration: underline !important;
+  }
+
+
+/* Dropdownmeny */
+
+#dropdownmenu{
+  margin-top: 445px;
+  margin-left: 20px;
+  background-color: var(--dark_blue);
+  float: left;
+  display: none;
+  width: 230px;
+  z-index: 10;
+  min-height: fit-content;
+  padding-bottom: 15px;
+}
+
+#dropdownmenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var( --dark_blue);
+  font-family: var(--b_font);
+  flex-grow: 1;
+}
+
+  #dropdownmenu li {
+    height: 50px;
+    font-family: var(--b_font);
+    display: block;
+    width: 100%;
+    align-content: center;
+  }
+
+  #dropdownmenu a {
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    color: var(--bg);
+    padding-left: 10px;
+    padding-top: 20px;
+    height: 90%;
+  }
+
+  #dropdownmenu a:hover {
+    background-color: var(--light_blue) !important;
+    color: var(--dark_blue) !important;
+  }
+
+
+/* Toggle knapp for dropdownmenyen */
+  #toggleId {
+    display: none;
+  }
+
+
+/* Når skjermen er under 990px blir navigasjonsmenyen til en dropdoownmeny som åpnes via toggle-knappen */
+@media screen and (max-width: 990px) {
+
+  #navmenu :not(:first-child) {
+    display: none;
+  }
+  
+  #toggleId {
+    display: block;
+    position: absolute;
+    border: none;
+    background: url("../images/icons/hamburger.png");
+    background-size: 100% 100%;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    margin-right: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  #logo > a {
+    float: left;
+  }
+}
+/* Når skjermen er over 990px blir dropdownmenyen borte, og navigasjonsbaren synlig igjen */
+@media screen and (min-width: 990px) {
+  #dropdownmenu {
+    display: none !important;
+  }
+}
+

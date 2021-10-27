@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/P2.css">
+
+    <title>P3 changes</title>
+</head>
+
+<body>
+    <div class="body">
+        <h1>P3 design changes</h1>
+        <h3>Gard Schei Høstmælingen, Stina Sofie Møller, Stian Forseth, Anita Stuberg Guldseth and Emil Brevik</h3>
+        <p>5. november 2020</p>
+        <a href="http://folk.ntnu.no/stiafo/DogDora/index.html">Link til nettside</a>
+
+        <!--Kunde-->
+        <div class='box'>
+            <h2>Administrative detaljer</h2>
+            <h4>Vår kunde: DogDora</h4>
+            <h4>Vår kontaktperson: Fido Langbein</h4>
+            <p>
+                Fido Langbein er eieren av DogDora, og vil være vår kontaktperson gjennom hele prosessen av å lage
+                nettsiden.
+            </p>
+        </div>
+
+        <div>
+            <h2>Hvordan gruppemedelemmmene utførte oppgavene sine</h2>
+
+            <p>
+                Emil lagde en god oversikt over viktig og nødvendig informasjon og spørsmål om adopsjon, samt det
+                overordnede stilarket som ble brukt av alle sidene.
+            </p>
+            <p>
+                Gard lagde en fin landingsside med det ønskede innholdet og hurtig navigering til andre sider. Han
+                jobbet også godt med å implementere bildekarusellen.
+            </p>
+            <p>
+				Stian gjorde skjemaet for donasjon og bli frivillig til en
+				enkel brukeropplevelse, samt lagde en css-fil for variabler som
+				ble brukt i de andre css-filene. Han lagde også en validering
+				for "Bli frivillig"-skjemaet og en automatisk utfylling av
+				poststed.
+            </p>
+            <p>
+                Anita jobbet godt med siden “Om oss” og "Kontakt oss", samt lagde navbar og footer slik at det kunne
+                gjenbrukes på alle
+                sidene, samt endret slik at det ble responsivt.
+            </p>
+            <p>
+                Stina Sofie lagde en oversiktlig oversikt over alle hundene, samt et fungerende søkefelt og filter.
+            </p>
+            <br>
+            <p>
+                Alle gruppemedelemmmene har utført de oppgavene de skulle, og har hjulpet hverandre når det har vært
+                nødvendig. Samarbeidet har fungert veldig godt.
+            </p>
+
+        </div>
+
+        <!-- Endringer -->
+        <div class='box'>
+            <h2> Endringer vi har gjort </h2>
+            <h3>
+                Alle sidene holder seg tro til det originale designet vi ønsket for DogDora, men med noen små endringer:
+            </h3>
+
+            <!-- HTML -->
+            <h3>
+                Endringer i HTML
+            </h3>
+
+            <!-- Adopter -->
+            <b>Endringer i adopt.html</b>
+            <p>adopt.html er tatt vekk da det ikke var behov for filen slik vi tenkte først
+                about_relocation.html og about_adoption er lagt til for å kompensere for den. Det ble ryddigere å ha det
+                på to sider.</p>
+
+            <!-- Spesifikk hund -->
+            <b>Endringer i specificdog.html</b>
+            <p>Vi fjernet "specificdog.html" fordi vi ikke trengte den. Siden ble ble derfor laget som et overlay i
+                dogs.html.</p>
+
+            <!-- Landingsside -->
+            <b>Endringer i index.html</b>
+            <p>
+                Vi endret fargen på "Hva skjer"-boksen. Det ble lettere å lese og mer stilrent slik det er nå. Vi
+                fjernet også pilen med "les mer"-tekst. Det er bare å scrolle seg ned, og blir mindre rotete slik
+                det er nå. Vi tok også vekk pilene på sidene for å kunne gå gjennom slideshowet, men la til den manuelle
+                navigeringen på rundingene som indikerer hvilket bilde man er på. Det gjorde designet mer stilrent og
+                uten unødvendige funksjoner. Overskriften i slideshowet på ble gjort litt mindre, da den tok
+                oppmerksomheten bort
+                fra logoen i navigasjonsbaren.
+            </p>
+
+            <!-- Om oss -->
+            <b>Endringer i about.html</b>
+            <p>Her er det ikke gjort noen endringer. Siden fungerte godt slik vi originalt designet den.</p>
+
+            <!-- Kontakt -->
+            <b>Endringer i contact.html</b>
+            <p>
+                Overskriften "Kontakt oss" ble gjort større enn de mindre overskriftene på åpningstider og sosiale
+                medier fordi det er hovedinnholdet på siden. Ellers fungerte resten fint som det var.
+            </p>
+
+            <!-- Hunder -->
+            <b>Endringer i dogs.html</b>
+            <p>
+                Egenskapene til hver hund på hundesiden blir ramset opp i stedet for å bli vist i en liste. Inne på
+                siden om hver hund blir alle bildene vist ved siden av hverandre, i stedet for å ha
+                det i en bildekarusell som først planlagt. Dette synes vi ser ryddigere ut.
+            </p>
+
+            <!-- Omplassering -->
+            <b>Endringer i about_relocation.html</b>
+            <p>
+                På omplasseringssiden har vi lagt til et +/- tegn foran punktene for å indikere at man kan trykke på
+                for å få opp underteksten som er skjult. Det ville ikke vært intuitivt at man kan trykke på teksten uten
+                disse. Siden har også fått en knapp for å laste ned sjekklisten, som vi glemte å legge til i det
+                orginale designet.
+
+            </p>
+
+            <!-- Frivillig -->
+            <b>Endringer i volunteer.html</b>
+            <p>
+				Frivillig-siden har fått automatisk utfylling av poststed når
+				man skriver inn postnummeret som gjør det mer brukervennlig å
+				bruke siden. Det har også blitt laget et feilmeldingsikon som
+				vises dersom tekstfeltene ikke passerer valideringen. Når man
+				trykker på feilmeldingsikonet åpnes et overlay som viser
+				feilmeldingen.
+            </p>
+
+            <!-- Doner -->
+            <b>Endringer i pledge.html</b>
+            <p>
+				Det er ikke gjort noen endringer på pledge.html.
+            </p>
+
+            <!-- Navigasjonsbar -->
+            <b>Endringer i navigasjonsbaren</b>
+            <p>
+                Den eneste endringen gjort her er at vi har lagt på en funksjon som highlighter hvilken side man er
+                på til enhver tid. Dette hadde vi ikke vist i modellen, men var opprinnelig planlagt.
+            </p>
+
+            <!-- Footer -->
+            <b>Endringer i footeren</b>
+            <p>Den eneste endringen her er at innholdet er spredt utover hele vinduet, og ikke samlet til venstre.
+                Dette er for å gi litt mer rom mellom innholdet, og ikke ha mye tom plass.
+
+
+                <!-- CSS -->
+            <h3>
+                Endringer i CSS
+            </h3>
+            <ul>
+                <li>
+                    Vi endret navnet på mappen med css-filene til “css”
+                </li>
+                <li>
+                    dogs.css, footer.css og navbar.css er lagt til fordi vi ikke tok høyde for at vi trengte dem
+                    da vi skrev planen.
+                </li>
+                <li>
+                    about_adoption.css, about_relocation.css er lagt til for å kompensere for at vi ikke har en
+                    egen side om adopsjon og omplassering sammen.
+                </li>
+            </ul>
+
+
+            <!-- Skriv om hvilke endringer vi har gjort i Javascript -->
+            <!-- Javascript -->
+            <h3>
+                Endringer i Javascript
+            </h3>
+            <b>Overlay.js</b>
+            <p>Filen overlay.js ble fjernet. Vi la istedet funksjonene til dogs.js</p>
+            <b>filter.js</b>
+            <p>Filen filter.js ble også fjernet. Funksjonene ble lagt til i dogs.js </p>
+            <b>formvalidator.js</b>
+            <p>
+				Her er det lagt til en del som henter inn alle postkodene i
+				Norge fra en .txt fil ved hjelp av en XMLHTTPRequest. Disse
+				postnumrene og postkodene lagres i et object der postkoden blir
+				brukt som key og poststedet er verdien. Poststedet blir så fylt
+				inn automatisk ettersom brukeren fyller inn postkoden. Det er
+				også blitt laget et overlay som viser feilmeldingen. Overlayet
+				kan åpnes ved å trykke på feilmeldingsikonet som dukker opp til
+				høyre for tekstfeltet når verdien til tekstfeltet ikke blir
+				godkjent av validatoren.
+			</p>
+            <b>slideshow.js</b>
+            <p>Filen slideshow.js ble endret til nyslider.js. </p>
+            <b>navbar.js</b>
+            <p>navbar.js ble beholdt slik som først tenkt.</p>
+            <b>footer.js</b>
+            <p>footer.js ble også beholdt slik som først tenkt.</p>
+
+			<!-- Annet -->
+			<h3>
+				Annet
+			</h3>
+			<b>Postnummerregister-utf.txt</b>
+			<p>
+			Postnummerregister-utf.txt ble lastet ned fra:
+			<br>
+			https://www.bring.no/tjenester/adressetjenester/postnummer
+			<br>
+			Denne filen inneholder informasjon om alle postnumrene i Norge.
+			Enkodingen på filen ble endret til urf-8 slik at æøå kunne vises.
+			</p>
+
+            <!-- Modularitet -->
+            <h3>
+                Hvordan vi har sørget for modularitet
+            </h3>
+            <ul>
+                <li>
+                    Anita lagde navigasjonsmenyen og footeren i JavaScript. De kan da brukes på alle sidene ved å kun
+                    legge til en div med id “navbar” og “footer”. Vi har derfor unngått å skrive denne koden mer enn en
+                    gang, og den kan brukes så mange ganger vi trenger. Oppdaterer vi et element i navigasjonsbaren
+                    eller footeren skjer endringen overalt, og man sparer masse tid og arbeid.
+                </li>
+                <li>
+                    Stian lagde en fil hvor vi definerte hvilke skrifttyper og farger vi skulle bruke, slik at
+                    de kunne importeres i hver CSS fil. Da refererer man til den variabelen for å hente definert
+                    farge/skrifttype. Gjør man en endring i den filen så blir endringene utført på alle sidene.
+                </li>
+                <li>
+                    Emil lagde “stylesheet.css” som er hovedstilarket vi har brukt som basis for hele
+                    prosjektet. Vi kunne da endre på f.eks styling på knapper, så ble alle knappene på sidene
+                    like.
+                </li>
+            </ul>
+
+
+
+            <!-- Plan -->
+            <div class='box'>
+                <h2>Oppdatert plan</h2>
+                <h3> Filer: </h3>
+                <ul>
+                    <li>index.html</li>
+                    <li>about.html</li>
+                    <li>contact.html</li>
+                    <li>about_adoption.html</li>
+                    <li>about_relocation.html</li>
+                    <li>dogs.html</li>
+                    <li>volunteer.html</li>
+                    <li>pledge.html</li>
+                    <li>images/
+                        <ul>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                    <li>scripts/
+                        <ul>
+                            <li>collapsible.js</li>
+                            <li>dogs.js</li>
+                            <li>footer.js</li>
+                            <li>formvalidator.js</li>
+                            <li>navbar.js</li>
+                            <li>nyslider.js</li>
+                        </ul>
+                    </li>
+                    <li>styling/
+                        <ul>
+                            <li>stylesheet.css</li>
+                            <li>variables.css</li>
+                            <li>index.css</li>
+                            <li>dogs.css</li>
+                            <li>contact.css</li>
+                            <li>about.css</li>
+                            <li>about_adoption.css</li>
+                            <li>about_relocation.css</li>
+                            <li>about_relocation.css</li>
+                            <li>pledge.css</li>
+                            <li>volunteer.css</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <table>
+                    <tr>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                        <th>JS</th>
+                        <th>Hvem</th>
+                    </tr>
+                    <tr>
+                        <td>index.html</td>
+                        <td>index.css</td>
+                        <td></td>
+                        <td>Gard</td>
+                    </tr>
+                    <tr>
+                        <td>about.html</td>
+                        <td>about.css</td>
+                        <td></td>
+                        <td>Anita</td>
+                    </tr>
+                    <tr>
+                        <td>contact.html</td>
+                        <td>contact.css</td>
+                        <td></td>
+                        <td>Anita</td>
+                    </tr>
+                    <tr>
+                        <td>dogs.html</td>
+                        <td>dogs.css</td>
+                        <td></td>
+                        <td>Stina Sofie</td>
+                    </tr>
+                    <tr>
+                        <td>about_relocation.html</td>
+                        <td>about_relocation.css</td>
+                        <td></td>
+                        <td>Emil</td>
+                    </tr>
+                    <tr>
+                        <td>about_adoption.html</td>
+                        <td>about_adoption.css</td>
+                        <td></td>
+                        <td>Emil</td>
+                    </tr>
+                    <tr>
+                        <td>volunteer.html</td>
+                        <td>volunteer.css</td>
+                        <td></td>
+                        <td>Stian</td>
+                    </tr>
+                    <tr>
+                        <td>pledge.html</td>
+                        <td>pledge.css</td>
+                        <td></td>
+                        <td>Stian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>stylesheet.css</td>
+                        <td></td>
+                        <td>Emil</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>variables.css</td>
+                        <td></td>
+                        <td>Stian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>collapsible.js</td>
+                        <td>Emil</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>dogs.js</td>
+                        <td>Stina</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>formvalidator.js</td>
+                        <td>Stian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>nyslider.js</td>
+                        <td>Gard</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>navbar.js</td>
+                        <td>Anita</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>footer.js</td>
+                        <td>Anita</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</html>
